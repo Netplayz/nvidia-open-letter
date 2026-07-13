@@ -15,29 +15,17 @@ NVIDIA has made progress by open-sourcing their kernel modules (since R515). But
 
 ## Sign the Letter
 
-### Via GitHub PR
-
 1. Fork this repository
 2. Add your entry to `signatures.md` (alphabetically by first name)
 3. Open a pull request
 
-### Via Email (no GitHub account needed)
-
-Email **patches@ezmirror.net** with:
-
-```
-Name: Your Name
-Title: Your Job Title
-Affiliation: Your Company or "Independent"
-GitHub: @yourhandle (optional)
-```
-
-Your signature is automatically added. See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
 ## How It Works
 
 - `letter.md` -- The open letter content
 - `signatures.md` -- Table of signers (Name, Title, Affiliation, GitHub)
+- `cves.md` -- CVE database for affected drivers
 - `style.css` -- Page styling
 - `.github/workflows/build-letter.yml` -- Combines letter + signatures, converts to HTML via pandoc, deploys to GitHub Pages
 
