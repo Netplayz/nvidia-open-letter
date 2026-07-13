@@ -34,7 +34,7 @@ jobs:
       - name: Configure git
         run: |
           git config user.name "nvidia-open-letter-bot"
-          git config user.email "bot@nvidia-open-letter.netplayz.dev"
+          git config user.email "bot@nvidia.ezmirror.net"
 
       - name: Quick-add from dispatch payload
         if: github.event_name == 'repository_dispatch' && github.event.payload.signer_name != ''

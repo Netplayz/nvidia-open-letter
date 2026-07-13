@@ -23,7 +23,7 @@ NVIDIA has made progress by open-sourcing their kernel modules (since R515). But
 
 ### Via Email (no GitHub account needed)
 
-Email **patches@nvidia-open-letter.netplayz.dev** with:
+Email **patches@nvidia.ezmirror.net** with:
 
 ```
 Name: Your Name

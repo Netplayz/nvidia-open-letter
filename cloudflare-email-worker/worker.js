@@ -3,7 +3,7 @@
 //
 // Setup:
 // 1. Create a Cloudflare Email Worker at dash.cloudflare.com > Workers & Pages
-// 2. Add an email route: nvidia-open-letter.netplayz.dev -> this worker
+// 2. Add an email route: nvidia.ezmirror.net -> this worker
 // 3. Set secrets: GITHUB_TOKEN, GITHUB_REPO
 //    wrangler secret put GITHUB_TOKEN   (a fine-grained PAT with contents:write)
 //    wrangler secret put GITHUB_REPO     (e.g. Netplayz/nvidia-open-letter)
