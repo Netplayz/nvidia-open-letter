@@ -37,12 +37,12 @@ jobs:
           git config user.email "bot@nvidia.ezmirror.net"
 
       - name: Quick-add from dispatch payload
-        if: github.event_name == 'repository_dispatch' && github.event.payload.signer_name != ''
+        if: github.event_name == 'repository_dispatch' && github.event.client_payload.signer_name != ''
         env:
-          NAME: ${{ github.event.payload.signer_name }}
-          TITLE: ${{ github.event.payload.signer_title }}
-          AFFILIATION: ${{ github.event.payload.signer_affiliation }}
-          GH: ${{ github.event.payload.signer_github || 'N/A' }}
+          NAME: ${{ github.event.client_payload.signer_name }}
+          TITLE: ${{ github.event.client_payload.signer_title }}
+          AFFILIATION: ${{ github.event.client_payload.signer_affiliation }}
+          GH: ${{ github.event.client_payload.signer_github || 'N/A' }}
         run: |
           ENTRY="| ${NAME} | ${TITLE} | ${AFFILIATION} | ${GH} |"
           awk -v entry="$ENTRY" '
@@ -55,9 +55,9 @@ jobs:
           git push
 
       - name: Apply full patch from dispatch
-        if: github.event_name == 'repository_dispatch' && github.event.payload.patch_content != '' && github.event.payload.signer_name == ''
+        if: github.event_name == 'repository_dispatch' && github.event.client_payload.patch_content != '' && github.event.client_payload.signer_name == ''
         env:
-          PATCH: ${{ github.event.payload.patch_content }}
+          PATCH: ${{ github.event.client_payload.patch_content }}
         run: |
           echo "$PATCH" > /tmp/patch.patch
           git am --3way /tmp/patch.patch
