@@ -40,6 +40,7 @@ jobs:
             -o _site/index.html \
             --standalone \
             --embed-resources \
+            --include-in-header=meta.html \
             --metadata title="An Open Letter to NVIDIA" \
             --css=style.css \
             --toc \
