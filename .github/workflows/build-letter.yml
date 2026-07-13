@@ -1,0 +1,60 @@
+name: Build and Deploy Open Letter
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "letter.md"
+      - "signatures.md"
+      - "style.css"
+      - ".github/workflows/build-letter.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Combine letter and signatures
+        run: cat letter.md signatures.md > combined.md
+
+      - name: Build HTML
+        run: |
+          pandoc combined.md \
+            -o letter.html \
+            --standalone \
+            --embed-resources \
+            --metadata title="An Open Letter to NVIDIA" \
+            --css=style.css \
+            --toc \
+            --toc-depth=2
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: letter.html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
