@@ -8,4 +8,4 @@ We, the undersigned, support this letter and call on NVIDIA to fully open source
 |---|---|---|---|
 | comma-tose | Linux user, FOSS advocate, and NVIDIA GPU owner | None | [@comma-tose](https://github.com/comma-tose) |
 | NetByte | Independent Security Researcher & Open Source Developer | Ezmirror | [@Netplayz](https://github.com/Netplayz) |
-| TotallyDIO | Linux User, OS dev, Freedom advocate, owns nvidia gpu | idk lol | [@TotallyDIO](https://github.com/TotallyDIO)
+| TotallyDIO | Linux User, OS dev, Freedom advocate, owns nvidia gpu | Nyarch Linux & AurumOS | [@TotallyDIO](https://github.com/TotallyDIO)
