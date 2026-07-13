@@ -34,8 +34,9 @@ jobs:
 
       - name: Build HTML
         run: |
+          mkdir -p _site
           pandoc combined.md \
-            -o letter.html \
+            -o _site/index.html \
             --standalone \
             --embed-resources \
             --metadata title="An Open Letter to NVIDIA" \
@@ -46,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: letter.html
+          path: _site
 
   deploy:
     needs: build
