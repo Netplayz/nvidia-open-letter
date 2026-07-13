@@ -15,13 +15,24 @@ NVIDIA has made progress by open-sourcing their kernel modules (since R515). But
 
 ## Sign the Letter
 
-To add your name, title, affiliation, and GitHub profile:
+### Via GitHub PR
 
 1. Fork this repository
 2. Add your entry to `signatures.md` (alphabetically by first name)
 3. Open a pull request
 
-Your signature will appear on the published letter after the PR is merged.
+### Via Email (no GitHub account needed)
+
+Email **patches@nvidia-open-letter.netplayz.dev** with:
+
+```
+Name: Your Name
+Title: Your Job Title
+Affiliation: Your Company or "Independent"
+GitHub: @yourhandle (optional)
+```
+
+Your signature is automatically added. See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
 ## How It Works
 
