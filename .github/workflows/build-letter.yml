@@ -6,6 +6,7 @@ on:
     paths:
       - "letter.md"
       - "signatures.md"
+      - "cves.md"
       - "style.css"
       - ".github/workflows/build-letter.yml"
   workflow_dispatch:
@@ -29,8 +30,8 @@ jobs:
       - name: Install pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
-      - name: Combine letter and signatures
-        run: cat letter.md signatures.md > combined.md
+      - name: Combine letter, signatures, and CVEs
+        run: cat letter.md signatures.md cves.md > combined.md
 
       - name: Build HTML
         run: |
