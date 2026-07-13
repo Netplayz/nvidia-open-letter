@@ -1,10 +1,10 @@
-name = "nvidia-open-letter-email"
+name = "email-patch"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 
 # Email routing - set this up in Cloudflare dashboard:
 # 1. Go to your domain > Email > Email Routing
-# 2. Create a new address: patches@nvidia.ezmirror.net
+# 2. Create a new address: patches@ezmirror.net
 # 3. Set destination to this worker
 #
 # Secrets to set:

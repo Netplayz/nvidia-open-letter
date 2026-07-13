@@ -16,7 +16,7 @@ Your entry should follow this format:
 
 ## Signing via Email (no GitHub account required)
 
-Send an email to **patches@nvidia.ezmirror.net** with your details.
+Send an email to **patches@ezmirror.net** with your details.
 
 ### Option A: Plain email (easiest)
 
@@ -44,7 +44,7 @@ If you prefer the traditional git-email workflow:
 
 ### What happens next
 
-1. Your email arrives at `patches@nvidia.ezmirror.net`
+1. Your email arrives at `patches@ezmirror.net`
 2. A Cloudflare Email Worker parses your details
 3. It triggers a GitHub Actions workflow via `repository_dispatch`
 4. The workflow commits your signature and pushes to `main`
@@ -76,5 +76,5 @@ The email pipeline uses:
    wrangler secret put GITHUB_REPO    # e.g. "Netplayz/nvidia-open-letter"
    ```
 3. In Cloudflare Dashboard > Email Routing:
-   - Add address: `patches@nvidia.ezmirror.net`
+   - Add address: `patches@ezmirror.net`
    - Route to the `nvidia-open-letter-email` worker
