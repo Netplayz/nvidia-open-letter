@@ -1,6 +1,6 @@
 ---
 title: "An Open Letter to NVIDIA: Fully Open Source Your Linux GPU Drivers"
-author: "The Linux Community"
+author: "We The People"
 date: "July 2026"
 ---
 
