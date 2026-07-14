@@ -138,6 +138,6 @@ The Linux ecosystem has been patient. NVIDIA has shown good faith with the kerne
 
 ---
 
-*This letter represents the views of Linux developers, system administrators, security researchers, and users who depend on NVIDIA GPU hardware in their daily work. We welcome dialogue with NVIDIA on this matter.*
+*This letter represents the collective voice of Linux core developers, paying customers, cloud infrastructure engineers, AI security researchers, enterprise data center clients, and local machine-learning operators who depend fundamentally on NVIDIA hardware to drive modern production infrastructure. We welcome continued, transparent collaboration with NVIDIA to finalize upstream parity and address outstanding firmware boundaries.*
 
 *To add your name to this letter, submit a pull request adding your entry to the signatures table.*
